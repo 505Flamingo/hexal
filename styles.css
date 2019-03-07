@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 63px;
+    background-color: #323232;
+    position: relative;
+}
+
+nav {
+    width: 300px;
+    margin: 0 auto;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+
+.list-item {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.list-item a{
+    text-decoration: none;
+    color: white;
+}
+
+.list-item a:hover {
+    color: #2eb398;
+}
+
+.hexagon {
+    width: 180px;
+    height: 210px;
+    margin: 90px 21px;
+    transform: rotate(120deg);
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.hex-layer-1 {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.hex-layer-2 {
+    width: 100%;
+    height: 100%;
+    background: #ccc3;
+    transform: rotate(-60deg);
+    visibility: visible;
+    background-image: url('assets/images/monsters/monster1-1.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
