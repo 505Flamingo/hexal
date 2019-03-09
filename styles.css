@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
 
 * {
     margin: 0;
@@ -8,19 +11,45 @@
 header {
     height: 63px;
     background-color: #323232;
+    box-sizing: border-box;
     position: relative;
 }
 
+header::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 49px solid transparent;
+	border-right: 49px solid transparent;
+    border-top: 28px solid #323232;
+    position: absolute;
+    left: 50%;
+    top: 63px;
+    transform: translateX(-50%);
+}
+
 nav {
-    width: 300px;
+    width: 368px;
     margin: 0 auto;
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 125%;
+    height: 1px;
+    width: 42%;
+    background: #e4e9eb;
+    left: 24%;
+    z-index: 1;
+    transform: translateX(-50%);
 }
 
 nav ul{
     display: flex;
     justify-content: center;
-    padding-top: 32px;
-
+    transform: translateY(-15px);
 }
 
 .nav-list {
@@ -30,11 +59,19 @@ nav ul{
     justify-content: space-between; 
 }
 
+.nav-list img {
+    position: relative;
+    z-index: 20;
+    top: 25px;
+}
+
 .list-item {
     font-family: 'Lato', sans-serif;
     font-size: 10px;
     font-weight: bold;
     text-transform: uppercase;
+    color: rgba(46, 179, 152, 255);
+    text-align: justify;
 }
 
 .list-item a{
@@ -46,10 +83,25 @@ nav ul{
     color: #2eb398;
 }
 
+.hex_row {
+    display: flex;
+    justify-content: center;
+    height: 232px;
+}
+
+.left-line{
+    height: 20px;
+    width: 500px;
+    border-top:1px solid #9EC1D4;
+    border-bottom: dotted 1px #9EC1D4;
+    padding-left:10px;
+}
+
+
 .hexagon {
     width: 180px;
     height: 210px;
-    margin: 90px 21px;
+    margin-right: 18px;
     transform: rotate(120deg);
     overflow: hidden;
     visibility: hidden;
@@ -68,8 +120,217 @@ nav ul{
     height: 100%;
     background: #ccc3;
     transform: rotate(-60deg);
+    overflow: hidden;
     visibility: visible;
-    background-image: url('assets/images/monsters/monster1-1.png');
-    background-repeat: no-repeat;
-    background-position: 50%;
 }
+
+.hexagon-field {
+    margin-top: 89px;
+    margin-bottom: 80px;
+}
+
+.hexagon .hex-layer-1 .hex-layer-2 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.hex_row + .hex_row {
+    margin-top: -60px;
+}
+
+.square-buttons {
+    float: left;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.square-buttons ul li a{
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #ddd2c5;
+    margin-right: 3px;
+}
+
+.square-buttons ul li a:hover {
+    background-color: #8b8784;
+}
+
+.author_info::before{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 79%;
+    height: 1px;
+    width: 96%;
+    background:#e4e9eb;
+    left:50%;
+    z-index:1;
+    transform:translateX(-50%);
+}
+
+
+.author_info {
+    background: #2eb398;
+    padding: 13px 0 12px 0;
+}
+
+.author_content {
+    height: 316px;
+    width: 820px;
+    margin: 0 auto;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #219d84;
+}
+
+.author-avatar {
+    background: url(assets/images/author-photo.jpg);
+    background-position: 50%;
+    display: inline-block;
+}
+
+.avatar-text {
+    padding: 54px 0 55px 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+h1 {
+    font-family: 'Maven Pro', sans-serif, AdobeInvisFont, MyriadPro-Regular;
+    font-weight: 400;
+    font-size: 30pt;
+    color: rgba(215, 252, 245, 255);
+}
+
+h2 {
+    font-family: 'Maven Pro', sans-serif, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 18pt;
+    font-weight: 400;
+    color: rgba(32, 129, 109, 255);
+    text-align: justify;
+}
+
+
+.author-decription {
+    font-family: 'Lato', sans-serif, AdobeInvisFont, MyriadPro-Regular;
+    font-weight: 400;
+    font-size: 12pt;
+    text-align: justify;
+    color: rgba(215, 252, 245, 255);
+    margin: 19px 0 40px 0;
+}
+
+.description {
+    padding-right: 20px;
+}
+
+.author-icons {
+
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.input_contacts {
+    background-color: #323232;
+    padding: 13px 30px;
+}
+
+.for_lines {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #2b2b2b;
+    padding: 13px 30px;
+}
+
+.feedback {
+    margin: 40px auto 0;
+    width: 780px;
+}
+
+.feedback p:first-child {
+    font-family: 'Maven Pro', sans-serif, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 40px;
+    color: rgba(224, 224, 224, 255);
+}
+
+.feedback p:nth-child(2) {
+    font-family: 'Maven Pro', sans-serif, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 24px;
+    color: rgba(190, 190, 190, 255);
+    padding-bottom: 2px;
+}
+
+.input-and-contacts {
+    margin: 0 auto;
+    width: 780px;
+    display: flex;
+    flex-direction: row;
+}
+
+.input-field input {
+    width: 100%;
+    margin-top: 16px;
+    background-color: #454545;
+    border: none;
+    font-family: 'Lato', sans-serif, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 12pt;
+    color: rgba(190, 190, 190, 255);
+    padding-left: 15px;
+}
+
+.input-field textarea {
+    width: 100%;
+    margin-top: 16px;
+    background-color: #454545;
+    border: none;
+    font-family: 'Lato', sans-serif, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 12pt;
+    color: rgba(190, 190, 190, 255);
+    padding: 13px 0 0 14px;
+    height: 150px;
+}
+
+.input-field input:nth-child(-n+3) {
+    height: 40px;
+}
+
+.input-field input:last-child {
+    height: 150px;
+}
+.address {
+    width: 280px;
+    padding: 16px 0px 0 39px;
+    display: inline-block;
+    font-family: 'Lato', sans-serif,  AdobeInvisFont, MyriadPro-Regular;
+    font-size: 12pt;
+    color: rgba(224, 224, 224, 255);
+    text-align: justify;
+}
+
+.bot-text {
+    padding-top: 46px;
+}
+
+.bot-text p img:first-child {
+    padding: 12px 11px 0 0;
+}
+
+.bot-footer {
+    height: 43px;
+    background-color: #222222;
+}
+
+.bot-footer p {
+    padding: 16px 0 0 39px;
+    font-family: 'Maven Pro', sans-serif, AdobeInvisFont, MyriadPro-Regular;
+    font-size: 9pt;
+    color: rgba(69, 69, 69, 255);
+}
+
