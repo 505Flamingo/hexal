@@ -1,1 +1,2 @@
-# hexal (https://505flamingo.github.io/hexal/)[https://505flamingo.github.io/hexal/]
+# hexal
+[Link](https://505flamingo.github.io/hexal/ "hexal link")
